@@ -1,11 +1,11 @@
 ﻿using MediatR;
 
-namespace NimblePros.MediatR.Contrib;
+namespace NimblePros.MediatR.Contrib.Abstractions;
 
 /// <summary>
 /// Source: https://code-maze.com/cqrs-mediatr-fluentvalidation/
 /// </summary>
 /// <typeparam name="TResponse"></typeparam>
-public interface ICommand<out TResponse> : IRequest<TResponse>
+public interface IQuery<out TResponse> : IRequest<TResponse>
 {
 }

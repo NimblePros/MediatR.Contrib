@@ -4,7 +4,7 @@ using Ardalis.GuardClauses;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace NimblePros.MediatR.Contrib;
+namespace NimblePros.MediatR.Contrib.Behaviors;
 
 /// <summary>
 /// Adds logging for all requests in MediatR pipeline.
@@ -42,11 +42,11 @@ public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
       _logger.LogInformation("Handling {RequestName}", typeof(TRequest).Name);
 
       // Reflection! Could be a performance concern
-      Type myType = request.GetType();
+      var myType = request.GetType();
       IList<PropertyInfo> props = new List<PropertyInfo>(myType.GetProperties());
-      foreach (PropertyInfo prop in props)
+      foreach (var prop in props)
       {
-        object? propValue = prop?.GetValue(request, null);
+        var propValue = prop?.GetValue(request, null);
         _logger.LogInformation("Property {Property} : {@Value}", prop?.Name, propValue);
       }
     }

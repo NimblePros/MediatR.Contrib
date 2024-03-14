@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using MediatR;
 
-namespace NimblePros.MediatR.Contrib;
+namespace NimblePros.MediatR.Contrib.Behaviors;
 
 /// <summary>
 /// This behavior assumes validators have been registered with the container.

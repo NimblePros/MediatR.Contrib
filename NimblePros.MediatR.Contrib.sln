@@ -5,11 +5,17 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NimblePros.MediatR.Contrib", "src\NimblePros.MediatR.Contrib\NimblePros.MediatR.Contrib.csproj", "{1A76E518-9F1E-48B0-BEDD-D68C243643C1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ED0E2224-8FD4-491A-A0C1-D414DCFE8512}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{ED0E2224-8FD4-491A-A0C1-D414DCFE8512}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0FC392C4-F5D7-4CDE-B273-B454BAD99B1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{23B8C729-45E8-4524-AB45-C44E189B6F5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NimblePros.SampleWeb", "sample\NimblePros.SampleWeb\NimblePros.SampleWeb.csproj", "{700A9F63-556E-409E-BA88-DD074E046923}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +27,19 @@ Global
 		{1A76E518-9F1E-48B0-BEDD-D68C243643C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A76E518-9F1E-48B0-BEDD-D68C243643C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A76E518-9F1E-48B0-BEDD-D68C243643C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{700A9F63-556E-409E-BA88-DD074E046923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{700A9F63-556E-409E-BA88-DD074E046923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{700A9F63-556E-409E-BA88-DD074E046923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{700A9F63-556E-409E-BA88-DD074E046923}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1A76E518-9F1E-48B0-BEDD-D68C243643C1} = {0FC392C4-F5D7-4CDE-B273-B454BAD99B1D}
+		{700A9F63-556E-409E-BA88-DD074E046923} = {23B8C729-45E8-4524-AB45-C44E189B6F5C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A964F4B-665C-4BE0-8461-8FA016912C81}
 	EndGlobalSection
 EndGlobal

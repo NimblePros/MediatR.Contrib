@@ -3,7 +3,7 @@ using Ardalis.Result.FluentValidation;
 using FluentValidation;
 using MediatR;
 
-namespace NimblePros.MediatR.Contrib;
+namespace NimblePros.MediatR.Contrib.Behaviors;
 
 /// <summary>
 /// This behavior assumes validators have been registered with the container.
@@ -44,7 +44,7 @@ public class ValidationBehavior<TRequest, TResponse> :
 #nullable disable
       if (failures.Count != 0)
       {
-        if (typeof(TResponse).IsGenericType && 
+        if (typeof(TResponse).IsGenericType &&
           typeof(TResponse).GetGenericTypeDefinition() == typeof(Result<>))
         {
           var resultType = typeof(TResponse).GetGenericArguments()[0];
@@ -67,7 +67,7 @@ public class ValidationBehavior<TRequest, TResponse> :
         }
       }
 #nullable enable
-  }
+    }
     return await next();
   }
 }
